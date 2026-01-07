@@ -30,7 +30,7 @@
   environment.systemPackages = with pkgs; [
 
     # IDE
-    jetbrains.idea-ultimate
+    jetbrains.idea
 
     # Utility
     bitwarden-cli
