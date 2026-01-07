@@ -68,11 +68,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1767776379,
-        "narHash": "sha256-8/Ca9TBA6Ea3JI32WvAAFXaogADTBkb7HHVfYzYG+C0=",
+        "lastModified": 1767776942,
+        "narHash": "sha256-Aq7z2Tq0Kpm8K3DuJOVUB3eDetMFTzwXMEhBihDGmNk=",
         "owner": "helvnor",
         "repo": "dotfiles",
-        "rev": "153d86482f652aad01458393ee3ac6cc59af5cf3",
+        "rev": "0b6a7a155f0d237fda20d62dd15bf95cb2e0d802",
         "type": "github"
       },
       "original": {
