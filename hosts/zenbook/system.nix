@@ -50,21 +50,21 @@
   boot.kernel.sysctl."fs.inotify.max_user_instances" = lib.mkForce 1024000;
   boot.kernel.sysctl."fs.inotify.max_user_watches" = lib.mkForce 1024000;
   boot.kernel.sysctl."fs.aio-max-nr" = 1048576;
-  boot.kernelParams = [ ];
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+  ];
 
   # Wayland support for Electron / Chrome apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # greeted
-  programs.hyprland.enable = true;
   services.greetd = {
     enable = true;
-    settings = rec {
-      initial_session = {
-        command = "Hyprland";
-        user = "norrman";
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
+        user = "greeter";
       };
-      default_session = initial_session;
     };
   };
 
