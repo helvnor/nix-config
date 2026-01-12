@@ -58,11 +58,17 @@
   # Wayland support for Electron / Chrome apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # greeted
+  programs.hyprland.enable = true;
   services.greetd = {
     enable = true;
     settings = {
+      initial_session = {
+        command = "${pkgs.hyprland}/bin/start-hyprland";
+        user = "norrman";
+      };
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --asterisks --remember --cmd ${pkgs.hyprland}/bin/start-hyprland";
         user = "greeter";
       };
     };
