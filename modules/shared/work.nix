@@ -36,6 +36,7 @@
     bitwarden-cli
     obsidian
     librewolf
+    vivaldi
     onlyoffice-desktopeditors
     gparted
 
