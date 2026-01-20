@@ -22,6 +22,7 @@
     tree-sitter
     trivy
     sops
+    altair
 
     # Languages
     luarocks
