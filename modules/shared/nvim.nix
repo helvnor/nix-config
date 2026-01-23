@@ -48,7 +48,7 @@
     python3Packages.black # black
     python3Packages.isort # isort
     rustfmt # rustfmt
-    nixfmt-rfc-style # nixfm
+    nixfmt # nixfm
     gotools # goimports
     pgformatter # pg_format
   ];
