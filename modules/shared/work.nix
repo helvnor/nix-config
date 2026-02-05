@@ -38,6 +38,7 @@
     vivaldi
     onlyoffice-desktopeditors
     gparted
+    altair
 
     # Docker & K8s
     stern
