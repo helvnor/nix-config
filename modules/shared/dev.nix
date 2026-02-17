@@ -27,7 +27,6 @@
     luarocks
     nodejs
     lua51Packages.lua
-    nodePackages."@angular/cli"
     cargo
     go
     gnumake
