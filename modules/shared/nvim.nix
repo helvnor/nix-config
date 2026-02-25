@@ -32,7 +32,7 @@
     golangci-lint-langserver # Go
 
     # Linters
-    eslint_d # eslint_d
+    eslint # eslint_d
     python3Packages.flake8 # flake8
     luajitPackages.luacheck # luacheck
     checkmake # checkmake
