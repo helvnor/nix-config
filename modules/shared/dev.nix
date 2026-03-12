@@ -22,6 +22,7 @@
     tree-sitter
     trivy
     sops
+    pnpm
 
     # Languages
     luarocks
