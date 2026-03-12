@@ -25,7 +25,6 @@
 
     # Languages
     luarocks
-    nodejs
     lua51Packages.lua
     cargo
     go
