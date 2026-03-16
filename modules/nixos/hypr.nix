@@ -1,9 +1,14 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    # Hypr
     hyprlock
     hypridle
     hyprpaper
+
+    # Tools 
+    nwg-displays
+    nautilus
   ];
 
   home.file.".config/hypr" = {
