@@ -42,6 +42,7 @@
     onlyoffice-desktopeditors
     gparted
     altair
+    nautilus
 
     # Docker & K8s
     stern

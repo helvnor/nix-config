@@ -1,4 +1,4 @@
-{ config,... }:
+{ config, ... }:
 {
   users.users.norrman = {
     isNormalUser = true;

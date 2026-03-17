@@ -4,18 +4,35 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    darwin.url = "github:lnl7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    agenix.url = "github:ryantm/agenix";
-    agenix.inputs.nixpkgs.follows = "nixpkgs";
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     dotfiles = {
       url = "github:helvnor/dotfiles";
       flake = false;
+    };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.noctalia-qs.follows = "noctalia-qs";
+    };
+
+    noctalia-qs = {
+      url = "github:noctalia-dev/noctalia-qs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
@@ -27,6 +44,8 @@
       home-manager,
       agenix,
       dotfiles,
+      noctalia,
+      noctalia-qs,
       ...
     }@inputs:
 
@@ -87,7 +106,6 @@
           ./modules/shared/work.nix # Work packages
 
           ./modules/nixos/hyprland.nix # Hyprland WM
-          # ./modules/nixos/cosmic.nix # Cosmic DE
 
           agenix.nixosModules.default
           home-manager.nixosModules.home-manager
@@ -104,11 +122,9 @@
                   ./hosts/zenbook/home.nix
 
                   # GUI
-                  ./modules/nixos/hypr.nix
-                  ./modules/nixos/waybar.nix
-                  ./modules/nixos/wofi.nix
-                  ./modules/nixos/mako.nix
+                  ./modules/nixos/hypr-config.nix
                   ./modules/nixos/icons.nix
+                  ./modules/nixos/noctalia.nix
 
                   # Packages
                   ./modules/shared/dev.nix
