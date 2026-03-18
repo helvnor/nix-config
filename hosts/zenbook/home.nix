@@ -5,9 +5,10 @@
     # Terminal
     ghostty
 
-    # Fonts
+    # Fonts / Icons
     nerd-fonts.hack
     nerd-fonts.jetbrains-mono
+    papirus-icon-theme
 
     # Screenshot
     slurp
