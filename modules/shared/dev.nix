@@ -24,6 +24,7 @@
     sops
     nodejs
     pnpm
+    claude-code
 
     # Languages
     luarocks
