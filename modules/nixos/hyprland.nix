@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   programs.hyprland.enable = true;
   services.greetd = {
@@ -6,7 +6,7 @@
     settings = {
       initial_session = {
         command = "${pkgs.hyprland}/bin/start-hyprland";
-        user = "norrman";
+        user = username;
       };
       default_session = {
         command = "${pkgs.tuigreet}/bin/tuigreet --asterisks --remember --cmd ${pkgs.hyprland}/bin/start-hyprland";

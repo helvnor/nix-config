@@ -12,7 +12,6 @@
 
     # Tools
     tmux
-    vim
     fzf
     ripgrep
     fd

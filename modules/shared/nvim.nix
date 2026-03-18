@@ -28,7 +28,6 @@
     dockerfile-language-server # dockerls
     sqls # For SQL language server
     graphql-language-service-cli # graphql
-    nodePackages.graphql-language-service-cli # graphql
     golangci-lint-langserver # Go
 
     # Linters
@@ -48,7 +47,7 @@
     python3Packages.black # black
     python3Packages.isort # isort
     rustfmt # rustfmt
-    nixfmt # nixfm
+    nixfmt # nixfmt
     gotools # goimports
     pgformatter # pg_format
   ];

@@ -45,7 +45,6 @@
       agenix,
       dotfiles,
       noctalia,
-      noctalia-qs,
       ...
     }@inputs:
 
@@ -68,6 +67,7 @@
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.norrman =
               { pkgs, ... }:
@@ -91,7 +91,7 @@
 
       ### ZENBOOK ###
       nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs; username = "norrman"; };
         system = "x86_64-linux";
 
         # SYSTEM
@@ -111,6 +111,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.norrman =
               { pkgs, ... }:
