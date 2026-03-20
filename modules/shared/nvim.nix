@@ -29,7 +29,6 @@
     sqls # For SQL language server
     graphql-language-service-cli # graphql
     golangci-lint-langserver # Go
-    gotmpl # Go Template
 
     # Linters
     eslint # eslint_d
