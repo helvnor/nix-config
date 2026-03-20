@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  services.pgadmin.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Essential
     vim
