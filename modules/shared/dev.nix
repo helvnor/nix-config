@@ -29,8 +29,18 @@
     luarocks
     lua51Packages.lua
     cargo
-    go
     gnumake
     gcc
+
+    (pkgs.go_1_26.overrideAttrs (
+      oldAttrs: finalAttrs: rec {
+        version = "1.26.0";
+        src = pkgs.fetchurl {
+          url = "https://go.dev/dl/go${version}.src.tar.gz";
+          hash = "sha256-yRMqih9r0qpKrR10uCMdlSdJUEg6SVBlfubFbm6Bd5A=";
+        };
+      }
+    ))
+
   ];
 }
