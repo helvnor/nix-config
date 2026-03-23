@@ -32,7 +32,7 @@
 
   services.pgadmin = {
     enable = true;
-    initialEmail = "pgadmin";
+    initialEmail = "pgadmin@local.host";
     initialPasswordFile = pkgs.writeText "pgadmin-password" "password";
   };
 
