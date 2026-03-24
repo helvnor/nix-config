@@ -24,6 +24,7 @@
     nodejs
     pnpm
     claude-code
+    gh
 
     # Languages
     luarocks
