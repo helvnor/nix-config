@@ -1,10 +1,10 @@
 { pkgs, config, ... }:
 {
 
-  # Docker config
   environment.sessionVariables = {
     COMPOSE_DOCKER_CLI_BUILD = "1";
     DOCKER_BUILDKIT = "1";
+    SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
   };
 
   virtualisation.docker = {
