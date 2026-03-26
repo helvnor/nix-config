@@ -32,6 +32,7 @@
     cargo
     gnumake
     gcc
+    postgresql
 
     (pkgs.go_1_26.overrideAttrs (
       oldAttrs: finalAttrs: rec {
