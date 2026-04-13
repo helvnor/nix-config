@@ -12,7 +12,7 @@
   home.packages = with pkgs; [
 
     # LSP Servers
-    nodePackages.typescript-language-server # tsserver
+    typescript-language-server # tsserver
     vscode-langservers-extracted # html, cssls
     lua-language-server # lua_ls
     nil # nil_ls
@@ -41,7 +41,7 @@
     golangci-lint # Go
 
     # Formatters
-    nodePackages.prettier # prettier
+    prettier # prettier
     prettierd
     stylua # stylua
     python3Packages.black # black
