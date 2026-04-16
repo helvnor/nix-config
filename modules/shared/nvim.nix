@@ -48,7 +48,6 @@
     python3Packages.isort # isort
     rustfmt # rustfmt
     nixfmt # nixfmt
-    gotools # goimports
     pgformatter # pg_format
   ];
 }
