@@ -10,7 +10,9 @@
   environment.systemPackages = with pkgs; [
     trash-cli
     colima
-    inputs.agenix.packages.aarch64-darwin.default
+    docker
+    docker-compose
+    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   system.keyboard.enableKeyMapping = true;

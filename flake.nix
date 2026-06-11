@@ -17,6 +17,13 @@
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.darwin.follows = "darwin";
+      inputs.home-manager.follows = "home-manager";
+    };
+
+    llm-agents = {
+      url = "github:numtide/llm-agents.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     dotfiles = {
@@ -26,12 +33,6 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.noctalia-qs.follows = "noctalia-qs";
-    };
-
-    noctalia-qs = {
-      url = "github:noctalia-dev/noctalia-qs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -43,12 +44,14 @@
       darwin,
       home-manager,
       agenix,
-      dotfiles,
-      noctalia,
+      llm-agents,
       ...
     }@inputs:
 
     {
+
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
+      formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt;
 
       ###  MBP14  ###
       darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
@@ -63,35 +66,32 @@
           ./modules/darwin/homebrew.nix # Homebrew
           ./modules/shared/utility.nix # Utility packages
 
-          agenix.nixosModules.default
+          agenix.darwinModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "hm-bak";
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.norrman =
-              { pkgs, ... }:
-              {
-                # HOME
-                imports = [
+            home-manager.users.norrman = {
+              # HOME
+              imports = [
 
-                  # General home configs
-                  ./hosts/mbp14/home.nix
+                # General home configs
+                ./hosts/mbp14/home.nix
 
-                  # Packages
-                  ./modules/shared/dev.nix
-                  ./modules/shared/nvim.nix
-
-                  agenix.homeManagerModules.default
-                ];
-              };
+                # Packages
+                ./modules/shared/dev.nix
+                ./modules/shared/nvim.nix
+              ];
+            };
           }
         ];
       };
 
       ### ZENBOOK ###
       nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; username = "norrman"; };
+        specialArgs = { inherit inputs; };
         system = "x86_64-linux";
 
         # SYSTEM
@@ -103,7 +103,7 @@
           ./modules/nixos/laptop.nix # Laptop firmware
 
           ./modules/shared/utility.nix # Utility packages
-          ./modules/shared/work.nix # Work packages
+          ./modules/nixos/work.nix # Work packages
 
           ./modules/nixos/hyprland.nix # Hyprland WM
 
@@ -112,28 +112,24 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "hm-bak";
             home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.norrman =
-              { pkgs, ... }:
-              {
-                # HOME
-                imports = [
+            home-manager.users.norrman = {
+              # HOME
+              imports = [
 
-                  # General home configs
-                  ./hosts/zenbook/home.nix
+                # General home configs
+                ./hosts/zenbook/home.nix
 
-                  # GUI
-                  ./modules/nixos/hypr-config.nix
-                  ./modules/nixos/icons.nix
-                  ./modules/nixos/noctalia.nix
+                # GUI
+                ./modules/nixos/hypr-config.nix
+                ./modules/nixos/noctalia.nix
 
-                  # Packages
-                  ./modules/shared/dev.nix
-                  ./modules/shared/nvim.nix
-
-                  agenix.homeManagerModules.default
-                ];
-              };
+                # Packages
+                ./modules/shared/dev.nix
+                ./modules/shared/nvim.nix
+              ];
+            };
           }
         ];
       };

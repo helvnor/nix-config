@@ -23,13 +23,14 @@
     sops
     nodejs
     pnpm
-    claude-code
     duckdb
+    inputs.llm-agents.packages.${pkgs.system}.claude-code
 
     # Languages
     luarocks
     lua51Packages.lua
     cargo
+    rustc
     gnumake
     gcc
     postgresql

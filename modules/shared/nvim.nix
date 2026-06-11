@@ -7,6 +7,8 @@
 
   programs.neovim = {
     enable = true;
+    withPython3 = false;
+    withRuby = false;
   };
 
   home.packages = with pkgs; [
@@ -31,7 +33,7 @@
     golangci-lint-langserver # Go
 
     # Linters
-    eslint # eslint_d
+    eslint
     python3Packages.flake8 # flake8
     luajitPackages.luacheck # luacheck
     checkmake # checkmake

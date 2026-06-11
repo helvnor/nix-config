@@ -13,11 +13,8 @@
 
   networking.firewall = {
     enable = true;
-    trustedInterfaces = [
-      "docker0"
-      "wg0"
-    ];
-    checkReversePath = false;
+    trustedInterfaces = [ "docker0" ];
+    checkReversePath = "loose";
   };
 
   age.secrets.wireguard = {
@@ -30,14 +27,18 @@
     };
   };
 
+  age.secrets.pgadmin = {
+    file = ../../secrets/pgadmin.age;
+  };
+
   services.pgadmin = {
     enable = true;
     initialEmail = "pgadmin@local.host";
-    initialPasswordFile = pkgs.writeText "pgadmin-password" "password";
+    initialPasswordFile = config.age.secrets.pgadmin.path;
   };
 
+  # pgadmin's systemd unit reads this for its PATH
   services.postgresql.package = pkgs.postgresql_16;
-
 
   environment.systemPackages = with pkgs; [
 
@@ -59,6 +60,7 @@
     kubectl
     kubectl-cnpg
     docker-buildx
+    docker-compose
 
     # Google Cloud
     (pkgs.google-cloud-sdk.withExtraComponents [

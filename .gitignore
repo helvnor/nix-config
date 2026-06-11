@@ -1,2 +1,6 @@
 # General
 **/.DS_Store
+
+# Nix build outputs
+result
+result-*

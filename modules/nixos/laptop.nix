@@ -20,9 +20,6 @@
     enable = true;
     extraPackages = with pkgs; [
       # Hardware acceleration
-      intel-vaapi-driver
-
-      # Intel media driver
       intel-media-driver
 
       # OpenCL support

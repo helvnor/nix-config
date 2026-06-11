@@ -13,7 +13,17 @@
     # Screenshot
     slurp
     grim
+
+    playerctl
   ];
+
+  # Cursor theme
+  home.pointerCursor = {
+    package = pkgs.phinger-cursors;
+    name = "phinger-cursors-dark";
+    size = 24;
+    gtk.enable = true;
+  };
 
   # Dark mode
   dconf.settings = {

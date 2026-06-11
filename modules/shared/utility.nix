@@ -9,9 +9,5 @@
     unzip
     htop
     sqlite
-
-    # Docker
-    docker
-    docker-compose
   ];
 }

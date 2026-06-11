@@ -1,13 +1,12 @@
 {
   inputs,
   pkgs,
-  lib,
   ...
 }:
 {
 
   # Network
-  networking.hostName = "nixbook";
+  networking.hostName = "zenbook";
   networking.networkmanager.enable = true;
 
   # Locale
@@ -35,6 +34,14 @@
   ];
   nixpkgs.config.allowUnfree = true;
 
+  # Garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "monthly";
+    options = "--delete-older-than 30d";
+  };
+  nix.optimise.automatic = true;
+
   programs.ssh.startAgent = true;
 
   # GTK support
@@ -44,8 +51,8 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # System performance tweaks
-  boot.kernel.sysctl."fs.inotify.max_user_instances" = lib.mkForce 1024000;
-  boot.kernel.sysctl."fs.inotify.max_user_watches" = lib.mkForce 1024000;
+  boot.kernel.sysctl."fs.inotify.max_user_instances" = 8192;
+  boot.kernel.sysctl."fs.inotify.max_user_watches" = 1024000;
   boot.kernel.sysctl."fs.aio-max-nr" = 1048576;
   boot.kernelParams = [
     "quiet"
@@ -72,13 +79,11 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    inputs.agenix.packages.x86_64-linux.default
-
-    xdg-desktop-portal
+    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     trashy
   ];
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.11";
 
 }
