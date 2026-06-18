@@ -1,6 +1,20 @@
 { pkgs, ... }:
 {
   programs.hyprland.enable = true;
+
+  boot.kernel.sysctl."fs.suid_dumpable" = 1;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common = {
+      default = [
+        "hyprland"
+        "gtk"
+      ];
+      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+    };
+  };
   services.greetd = {
     enable = true;
     settings = {
