@@ -25,6 +25,7 @@
     pnpm
     duckdb
     inputs.llm-agents.packages.${pkgs.system}.claude-code
+    inputs.llm-agents.packages.${pkgs.system}.antigravity-cli
     fluxcd
 
     # Languages
