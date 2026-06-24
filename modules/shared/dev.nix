@@ -25,6 +25,7 @@
     pnpm
     duckdb
     inputs.llm-agents.packages.${pkgs.system}.claude-code
+    fluxcd
 
     # Languages
     luarocks
