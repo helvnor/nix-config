@@ -72,11 +72,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778446047,
-        "narHash": "sha256-oQvcadh2BCkrog+SGrG6YffKJrveYpjj3TdQJWaKhaM=",
+        "lastModified": 1782772816,
+        "narHash": "sha256-s9BuFv0mRuZx9C1MF8qPHRdcAK14ONi0A5m6E2wqOoM=",
         "owner": "nix-community",
         "repo": "bun2nix",
-        "rev": "f2bc12af1a6369648aac41041ceeaa0b866599c6",
+        "rev": "5a39d717029e94163ac223aee8d5c9946cafed1c",
         "type": "github"
       },
       "original": {
@@ -108,11 +108,19 @@
     "dotfiles": {
       "flake": false,
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1781788027,
         "narHash": "sha256-QycM6Nc6D8n5fd0Gszwo3xiPJqeyPrh1SklFIpqxcB8=",
         "owner": "helvnor",
         "repo": "dotfiles",
         "rev": "b6e40858780b0406e6c52d4c1300f865fcb458d7",
+=======
+        "lastModified": 1783024314,
+        "narHash": "sha256-X4KhwsPYhsJUiCFGah8XFbT+PDkd/o9R6YZoej1pCQc=",
+        "owner": "helvnor",
+        "repo": "dotfiles",
+        "rev": "ea25a8f7ede3dfc2ecb79c8a6e8d717efe7e889a",
+>>>>>>> e01662b (chore: update flake)
         "type": "github"
       },
       "original": {
@@ -129,11 +137,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778716662,
-        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
+        "lastModified": 1782949081,
+        "narHash": "sha256-vp6Y/Grm98ESt6ceOkWiHWyZRDV3J1RID4w+6NWK9yA=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
+        "rev": "17c9d6cdfc60c64f4ee8d306f9bc0b4ccb51481e",
         "type": "github"
       },
       "original": {
@@ -149,11 +157,19 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1781788787,
         "narHash": "sha256-YqlTCRRhGvNjcJejPeMuHrYQ/TVhOO2MV/nEGMWb8nk=",
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "d456f483f157d4b706416005da226234b9c116ff",
+=======
+        "lastModified": 1783024095,
+        "narHash": "sha256-oE+TNK98Pl7nHW4VU1oBvUKD5JR45U+py/NJmLoTNHI=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "a4d410db95a6416d1008049330bd86b85b5db45a",
+>>>>>>> e01662b (chore: update flake)
         "type": "github"
       },
       "original": {
@@ -174,11 +190,19 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1781764304,
         "narHash": "sha256-PESLN9z2WfRSFDWR6ZAeYU4l/Xq7oqqLn7/Myfk1OhE=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
         "rev": "cf6642d1330d158ceee9d4770e085ce86180a0e0",
+=======
+        "lastModified": 1783022271,
+        "narHash": "sha256-DT3GboyHP4I/egKFGDUPG0+GsyL758NTiNfLt8GkQYE=",
+        "owner": "numtide",
+        "repo": "llm-agents.nix",
+        "rev": "2d0cf2c342458a54cb25a3c8dfa4d36472f0b868",
+>>>>>>> e01662b (chore: update flake)
         "type": "github"
       },
       "original": {
@@ -189,11 +213,19 @@
     },
     "nixpkgs": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1781577229,
         "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
+=======
+        "lastModified": 1782723713,
+        "narHash": "sha256-oPXCU/SSUokcGaJREHibG1CBX3+s/W7orDWQOZDsEeQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b5aa0fbd538984f6e3d201be0005b4463d8b09f8",
+>>>>>>> e01662b (chore: update flake)
         "type": "github"
       },
       "original": {
@@ -210,11 +242,19 @@
         ]
       },
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1781793161,
         "narHash": "sha256-pKDbrGfaEYVc8UF3KjOV453DCxITa2K+XDV7cWjKd2o=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
         "rev": "44d74a6dffcc57999963f4322a47febd167c4a92",
+=======
+        "lastModified": 1783024300,
+        "narHash": "sha256-qFdhj5qZTzSKmIVQVOCygPOTduo6WT5GBqcseP1zlvU=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "5fb7e57ae6b9137197bf1faca285a881e2bb76f1",
+>>>>>>> e01662b (chore: update flake)
         "type": "github"
       },
       "original": {
