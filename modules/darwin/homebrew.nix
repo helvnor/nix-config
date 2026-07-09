@@ -18,6 +18,7 @@
       "battle-net"
       "curseforge"
       "steam"
+      "anki"
 
       # Browser
       "google-chrome"
