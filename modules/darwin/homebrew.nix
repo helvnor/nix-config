@@ -23,8 +23,8 @@
       # Browser
       "google-chrome"
     ];
-    onActivation.cleanup = "uninstall";
-    onActivation.upgrade = true;
+    # onActivation.cleanup = "uninstall";
+    # onActivation.upgrade = true;
     caskArgs.no_quarantine = true;
   };
 }
