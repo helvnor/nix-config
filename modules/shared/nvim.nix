@@ -51,5 +51,6 @@
     rustfmt # rustfmt
     nixfmt # nixfmt
     pgformatter # pg_format
+    libxml2 # xmllint
   ];
 }
