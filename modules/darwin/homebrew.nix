@@ -3,8 +3,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "swift"
-
       # Terminal
       "ghostty"
 
