@@ -31,6 +31,7 @@
     sqls # For SQL language server
     graphql-language-service-cli # graphql
     golangci-lint-langserver # Go
+    tofu-ls # tofu_ls
 
     # Linters
     eslint
@@ -41,6 +42,7 @@
     proselint # prose
     vale # vale
     golangci-lint # Go
+    tflint # tflint
 
     # Formatters
     prettier # prettier
