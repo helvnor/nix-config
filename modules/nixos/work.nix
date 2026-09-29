@@ -17,13 +17,14 @@
     checkReversePath = "loose";
   };
 
-  # networking.hosts = {
-  #   "35.228.235.155" = [
-  #     "editor.demo-mfn.se"
-  #     "demo-mfn.se"
-  #     "storage.demo-mfn.se"
-  #   ];
-  # };
+  networking.hosts = {
+    "34.120.177.52" = [
+      "mfn.modfin.se"
+      "editor.mfn.modfin.se"
+      "hub.mfn.modfin.se"
+      "storage.mfn.modfin.se"
+    ];
+  };
 
   age.secrets.wireguard = {
     file = ../../secrets/wireguard.age;
