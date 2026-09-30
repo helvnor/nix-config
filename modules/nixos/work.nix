@@ -17,13 +17,13 @@
     checkReversePath = "loose";
   };
 
-  networking.hosts = {
-    "159.89.213.238" = [
-      "mfn.nu"
-      "editor.mfn.nu"
-      "hub.mfn.nu"
-    ];
-  };
+  # networking.hosts = {
+  #   "159.89.213.238" = [
+  #     "mfn.nu"
+  #     "editor.mfn.nu"
+  #     "hub.mfn.nu"
+  #   ];
+  # };
 
   age.secrets.wireguard = {
     file = ../../secrets/wireguard.age;
