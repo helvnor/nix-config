@@ -29,6 +29,9 @@
     # inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.antigravity-cli
     fluxcd
     opentofu
+    kubernetes-helm
+    kubernetes-helmPlugins.helm-diff
+    helmfile
 
     # Languages
     luarocks
