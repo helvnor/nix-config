@@ -18,11 +18,10 @@
   };
 
   networking.hosts = {
-    "34.120.177.52" = [
-      "mfn.modfin.se"
-      "editor.mfn.modfin.se"
-      "hub.mfn.modfin.se"
-      "storage.mfn.modfin.se"
+    "159.89.213.238" = [
+      "mfn.nu"
+      "editor.mfn.nu"
+      "hub.mfn.nu"
     ];
   };
 
