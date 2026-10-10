@@ -9,7 +9,6 @@
 
   environment.systemPackages = with pkgs; [
     trash-cli
-    colima
     docker
     docker-compose
     inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default

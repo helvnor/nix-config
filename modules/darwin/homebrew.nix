@@ -6,6 +6,9 @@
       # Terminal
       "ghostty"
 
+      # Dev
+      "orbstack"
+
       # Social
       "messenger"
       "discord"
